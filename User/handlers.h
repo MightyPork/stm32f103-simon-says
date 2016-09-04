@@ -7,8 +7,6 @@
 
 #include <common.h>
 
-void ButtonHandler(uint32_t button, bool press);
-
 void user_Error_Handler();
 
 void user_assert_failed(uint8_t* file, uint32_t line);

@@ -7,6 +7,8 @@
 
 #include <common.h>
 
+void ButtonHandler(uint32_t button, bool press);
+
 void user_main();
 
 #endif //MPORK_USER_MAIN_H

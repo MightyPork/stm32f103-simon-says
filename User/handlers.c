@@ -3,19 +3,10 @@
 //
 
 #include <common.h>
+#include "utils/ws2812.h"
 #include "utils/timebase.h"
 #include "utils/debug.h"
 #include "handlers.h"
-
-/**
- * @brief Handle a button press. Delete if not needed - a possible callback for debouncer.
- * @param button: button identifier
- * @param press: press state (1 = just pressed, 0 = just released)
- */
-void ButtonHandler(uint32_t button, bool press)
-{
-	dbg("Button %d, state %d", button, press);
-}
 
 /**
  * Increment timebase counter each ms.

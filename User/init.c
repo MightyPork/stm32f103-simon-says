@@ -5,7 +5,7 @@
 #include <common.h>
 #include "utils/debounce.h"
 #include "init.h"
-#include "handlers.h"
+#include "user_main.h"
 
 static void init_buttons()
 {
@@ -15,9 +15,21 @@ static void init_buttons()
 	debo.GPIOx = GPIOB; // All buttons are on port B
 	debo.callback = ButtonHandler;
 
-	//debo.pin = BTN1_Pin;
-	//debo.cb_payload = 1;
-	//debo_register_pin(&debo);
+	debo.pin = BTN1_Pin;
+	debo.cb_payload = 0;
+	debo_register_pin(&debo);
+
+	debo.pin = BTN2_Pin;
+	debo.cb_payload = 1;
+	debo_register_pin(&debo);
+
+	debo.pin = BTN3_Pin;
+	debo.cb_payload = 2;
+	debo_register_pin(&debo);
+
+	debo.pin = BTN4_Pin;
+	debo.cb_payload = 3;
+	debo_register_pin(&debo);
 }
 
 /** Init the application */
